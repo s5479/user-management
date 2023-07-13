@@ -17,10 +17,10 @@ const _dirname1 = path.resolve();
 // console.log(__dirname);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/foodapp/build")));
+  app.use(express.static(path.join(__dirname, "/user-management-client/build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "foodapp", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "user-management-client", "build", "index.html"));
   });
 } else {
   app.get("/", (req, res) => {
